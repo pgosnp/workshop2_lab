@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)https://buelearning.hkbu.edu.hk/mod/resource/view.php?id=710755 -->
+<html dir="ltr" lang="en" xml:lang="en" class="yui3-js-enabled gr__buelearning_hkbu_edu_hk"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>COMP2019 (2001/2002) [2017 S2] - Dr Choy Man Ting: compWS lab2 ExpressJS</title>
+    <link rel="shortcut icon" href="https://buelearning.hkbu.edu.hk/theme/image.php/aardvark/theme/1514883817/favicon">
+	<link rel="apple-touch-icon-precomposed" href="https://buelearning.hkbu.edu.hk/theme/image.php/aardvark/theme/1514883817/apple-touch-icon">
+	
+<meta name="keywords" content="moodle, COMP2019 (2001/2002) [2017 S2] - Dr Choy Man Ting: compWS lab2 ExpressJS">
+<link rel="stylesheet" type="text/css" href="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/yui_combo.php"><link charset="utf-8" rel="stylesheet" id="yui_3_17_2_1_1516775613660_12" href="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/yui_combo(1).php"><script charset="utf-8" id="yui_3_17_2_1_1516775613660_13" src="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/yui_combo(2).php" async=""></script><script charset="utf-8" id="yui_3_17_2_1_1516775613660_30" src="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/yui_combo(3).php" async=""></script><script charset="utf-8" id="yui_3_17_2_1_1516775613660_41" src="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/yui_combo(4).php" async=""></script><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/all">
+<script type="text/javascript">
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/buelearning.hkbu.edu.hk","sesskey":"88OlUk0XsK","loadingicon":"https:\/\/buelearning.hkbu.edu.hk\/theme\/image.php\/aardvark\/core\/1514883817\/i\/loading_small","themerev":"1514883817","slasharguments":1,"theme":"aardvark","jsrev":"1514883817","admin":"admin","svgicons":true};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''};if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else me.path=component+'/'+component+'.'+me.type};
+YUI_config = {"debug":false,"base":"https:\/\/buelearning.hkbu.edu.hk\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/buelearning.hkbu.edu.hk\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/buelearning.hkbu.edu.hk\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/buelearning.hkbu.edu.hk\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/buelearning.hkbu.edu.hk\/theme\/yui_combo.php?m\/1514883817\/","combine":true,"comboBase":"https:\/\/buelearning.hkbu.edu.hk\/theme\/yui_combo.php?","ext":false,"root":"m\/1514883817\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-event":{"requires":["event-custom"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-dock":{"requires":["base","node","event-custom","event-mouseenter","event-resize","escape","moodle-core-dock-loader","moodle-core-event"]},"moodle-core-dock-loader":{"requires":["escape"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-checknet":{"requires":["base-base","moodle-core-notification-alert","io-base"]},"moodle-core-formautosubmit":{"requires":["base","event-key"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core_availability-form":{"requires":["base","node","event","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-calendar-info":{"requires":["base","node","event-mouseenter","event-key","overlay","moodle-calendar-info-skin"]},"moodle-course-formatchooser":{"requires":["base","node","node-event-simulate"]},"moodle-course-modchooser":{"requires":["moodle-core-chooserdialogue","moodle-course-coursebase"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-toolboxes":{"requires":["node","base","event-key","node","io","moodle-course-coursebase","moodle-course-util"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-form-passwordunmask":{"requires":["node","base"]},"moodle-form-showadvanced":{"requires":["node","base","selector-css3"]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-core_message-deletemessage":{"requires":["node","event"]},"moodle-core_message-messenger":{"requires":["escape","handlebars","io-base","moodle-core-notification-ajaxexception","moodle-core-notification-alert","moodle-core-notification-dialogue","moodle-core-notification-exception"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-qbankmanager":{"requires":["node","selector-css3"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-qtype_ddimageortext-dd":{"requires":["node","dd","dd-drop","dd-constrain"]},"moodle-qtype_ddimageortext-form":{"requires":["moodle-qtype_ddimageortext-dd","form_filepicker"]},"moodle-qtype_ddmarker-dd":{"requires":["node","event-resize","dd","dd-drop","dd-constrain","graphics"]},"moodle-qtype_ddmarker-form":{"requires":["moodle-qtype_ddmarker-dd","form_filepicker","graphics","escape"]},"moodle-qtype_ddwtos-dd":{"requires":["node","dd","dd-drop","dd-constrain"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_forum-subscriptiontoggle":{"requires":["base-base","io-base"]},"moodle-mod_oublog-savecheck":{"requires":["base","node","io","panel","moodle-core-notification-alert"]},"moodle-mod_oublog-tagselector":{"requires":["base","node","autocomplete","autocomplete-filters","autocomplete-highlighters"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-randomquestion":{"requires":["base","event","node","io","moodle-core-notification-dialogue"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-mod_quiz-quizquestionbank":{"requires":["base","event","node","io","io-form","yui-later","moodle-question-qbankmanager","moodle-core-notification-dialogue"]},"moodle-mod_quiz-repaginate":{"requires":["base","event","node","io","moodle-core-notification-dialogue"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-util":{"requires":["node"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_grader-gradereporttable":{"requires":["base","node","event","handlebars","overlay","event-hover"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_html-button":{"requires":["moodle-editor_atto-plugin","event-valuechange"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/buelearning.hkbu.edu.hk\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/buelearning.hkbu.edu.hk\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1514883817\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/buelearning.hkbu.edu.hk\/lib\/javascript.php\/1514883817\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/buelearning.hkbu.edu.hk\/lib\/javascript.php\/1514883817\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script><style type="text/css" abt="234"></style>
+
+<meta name="Description" content="HKBU eLearning Platform, BUeLearning, HKBU Moodle, BUMoodle, LMS">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Fonts -->
+	<link href="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/css" rel="stylesheet" type="text/css"> 
+    <link href="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/font-awesome.min.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="core/first" src="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/first.js"></script><script>//console.log('a')
+</script><script>doAdblock();
+function doAdblock(){
+    (function() {
+        function A() {}
+        A.prototype = {
+            rules: {
+                'pps_pps': {
+                    'find': /^http:\/\/www\.iqiyi\.com\/player\/cupid\/common\/pps_flvplay_s\.swf/,
+                    'replace': 'http://swf.adtchrome.com/pps_20140420.swf'
+                },
+                '17173_in':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/PreloaderFile(Customer)?\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173_in_20150522.swf"
+                },
+                '17173_out':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/PreloaderFileFirstpage\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173_out_20150522.swf"
+                },
+                '17173_live':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/Player_stream(_firstpage)?\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173_stream_20150522.swf"
+                },
+                '17173_live_out':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/Player_stream_(custom)?Out\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173.out.Live.swf"
+                }
+            },
+            _done: null,
+            get done() {
+                if(!this._done) {
+                    this._done = new Array();
+                }
+                return this._done;
+            },
+            addAnimations: function() {
+                var style = document.createElement('style');
+                style.type = 'text/css';
+                style.innerHTML = 'object,embed{\
+                -webkit-animation-duration:.001s;-webkit-animation-name:playerInserted;\
+                -ms-animation-duration:.001s;-ms-animation-name:playerInserted;\
+                -o-animation-duration:.001s;-o-animation-name:playerInserted;\
+                animation-duration:.001s;animation-name:playerInserted;}\
+                @-webkit-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @-ms-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @-o-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}';
+                document.getElementsByTagName('head')[0].appendChild(style);
+            },
+            animationsHandler: function(e) {
+                if(e.animationName === 'playerInserted') {
+                    this.replace(e.target);
+                }
+            },
+            replace: function(elem) {
+                if (/http:\/\/v.youku.com\/v_show\/.*/.test(window.location.href)){
+                    var tag = document.getElementById("playerBox").getAttribute("player")
+                    if (tag == "adt"){
+                        console.log("adt adv")
+                        return;
+                    }
+                }
+                if(this.done.indexOf(elem) != -1) return;
+                this.done.push(elem);
+                var player = elem.data || elem.src;
+                if(!player) return;
+                var i, find, replace = false;
+                for(i in this.rules) {
+                    find = this.rules[i]['find'];
+                    if(find.test(player)) {
+                        replace = this.rules[i]['replace'];
+                        if('function' === typeof this.rules[i]['preHandle']) {
+                            this.rules[i]['preHandle'].bind(this, elem, find, replace, player)();
+                        }else{
+                            this.reallyReplace.bind(this, elem, find, replace)();
+                        }
+                        break;
+                    }
+                }
+            },
+            reallyReplace: function(elem, find, replace) {
+                elem.data && (elem.data = elem.data.replace(find, replace)) || elem.src && ((elem.src = elem.src.replace(find, replace)) && (elem.style.display = 'block'));
+                var b = elem.querySelector("param[name='movie']");
+                this.reloadPlugin(elem);
+            },
+            reloadPlugin: function(elem) {
+                var nextSibling = elem.nextSibling;
+                var parentNode = elem.parentNode;
+                parentNode.removeChild(elem);
+                var newElem = elem.cloneNode(true);
+                this.done.push(newElem);
+                if(nextSibling) {
+                    parentNode.insertBefore(newElem, nextSibling);
+                } else {
+                    parentNode.appendChild(newElem);
+                }
+            },
+            init: function() {
+                var handler = this.animationsHandler.bind(this);
+                document.body.addEventListener('webkitAnimationStart', handler, false);
+                document.body.addEventListener('msAnimationStart', handler, false);
+                document.body.addEventListener('oAnimationStart', handler, false);
+                document.body.addEventListener('animationstart', handler, false);
+                this.addAnimations();
+            }
+        };
+        new A().init();
+    })();
+}
+// 20140730
+(function cnbeta() {
+    if (document.URL.indexOf('cnbeta.com') >= 0) {
+        var elms = document.body.querySelectorAll("p>embed");
+        Array.prototype.forEach.call(elms, function(elm) {
+            elm.style.marginLeft = "0px";
+        });
+    }
+})();
+//baidu
+if(document.URL.indexOf('www.baidu.com') >= 0){
+    if(document && document.getElementsByTagName && document.getElementById && document.body){
+        var aa = function(){
+            var all = document.body.querySelectorAll("#content_left div,#content_left table");
+            for(var i = 0; i < all.length; i++){
+                if(/display:\s?(table|block)\s!important/.test(all[i].getAttribute("style"))){all[i].style.display= "none";all[i].style.visibility='hidden';}
+            }
+            all = document.body.querySelectorAll('.result.c-container[id="1"]');
+            //if(all.length == 1) return;
+            for(var i = 0; i < all.length; i++){
+                if(all[i].innerHTML && all[i].innerHTML.indexOf('廣告')>-1){
+                    all[i].style.display= "none";all[i].style.visibility='hidden';
+                }
+            }
+        }
+        aa();
+        document.getElementById('wrapper_wrapper').addEventListener('DOMSubtreeModified',aa)
+    };
+}
+// 20140922
+(function kill_360() {
+    if (document.URL.indexOf('so.com') >= 0) {
+        document.getElementById("e_idea_pp").style.display = none;
+    }
+})();
+if (document.URL.indexOf("tv.sohu.com") >= 0){
+    if (document.cookie.indexOf("fee_status=true")==-1){document.cookie='fee_status=true'};
+}
+if (document.URL.indexOf("56.com") >= 0){
+    if (document.cookie.indexOf("fee_status=true")==-1){document.cookie='fee_status=true'};
+}
+if (document.URL.indexOf("iqiyi.com") >= 0){
+    if (document.cookie.indexOf("player_forcedType=h5_VOD")==-1){
+        document.cookie='player_forcedType=h5_VOD'
+        if(localStorage.reloadTime && Date.now() - parseInt(localStorage.reloadTime)<60000){
+            console.log('no reload')
+        }else{
+            location.reload()
+            localStorage.reloadTime = Date.now();
+        }
+    }
+}
+</script><style type="text/css">object,embed{                -webkit-animation-duration:.001s;-webkit-animation-name:playerInserted;                -ms-animation-duration:.001s;-ms-animation-name:playerInserted;                -o-animation-duration:.001s;-o-animation-name:playerInserted;                animation-duration:.001s;animation-name:playerInserted;}                @-webkit-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @-ms-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @-o-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}</style><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jqueryprivate" src="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/jquery-private.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery" src="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/jquery-1.12.1.min.js"></script></head>
+
+
+<body id="page-mod-resource-view" class="format-topics  path-mod path-mod-resource safari dir-ltr lang-en yui-skin-sam yui3-skin-sam buelearning-hkbu-edu-hk pagelayout-incourse course-70509 context-1008560 cmid-710755 category-331 has-region-side-pre used-region-side-pre has-region-side-post empty-region-side-post side-pre-only jsenabled" style="" data-gr-c-s-loaded="true">
+
+<div class="skiplinks"><a class="skip" href="https://buelearning.hkbu.edu.hk/mod/resource/view.php?id=710755#maincontent">Skip to main content</a></div>
+<script type="text/javascript" src="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/yui_combo(5).php"></script><div id="yui3-css-stamp" style="position: absolute !important; visibility: hidden !important" class=""></div><script type="text/javascript" src="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/javascript-static.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+
+<header role="banner" class="navbar navbar-fixed-top">
+    <nav role="navigation" class="navbar-inner">
+        <div class="container-fluid">
+		
+		<a class="brand" href="https://buelearning.hkbu.edu.hk/"></a>
+		
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+			    <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+			
+            <div class="usermenu"><div id="action-menu-0" class="moodle-actionmenu nowrap-items" data-enhance="moodle-core-actionmenu" data-enhanced="1"><ul id="action-menu-0-menubar" class="menubar" role="menubar"><li role="presentation"><a class="toggle-display textmenu" title="" id="action-menu-toggle-0" role="menuitem" href="https://buelearning.hkbu.edu.hk/mod/resource/view.php?id=710755#" aria-haspopup="true"><span class="userbutton"><span class="usertext">WONG Tsz Shing</span><span class="avatars"><span class="avatar current"><img src="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/f2" alt="Picture of WONG Tsz Shing" title="Picture of WONG Tsz Shing" class="userpicture" width="35" height="35" role="presentation"></span></span></span><b class="caret"></b></a></li></ul><ul id="action-menu-0-menu" class="menu  align-tr-br" data-rel="menu-content" aria-labelledby="action-menu-toggle-0" role="menu" data-align="tr-br" aria-hidden="true"><li role="presentation"><a class="icon menu-action" role="menuitem" data-title="mymoodle,admin" href="https://buelearning.hkbu.edu.hk/my/" aria-labelledby="actionmenuaction-1"><img class="iconsmall" alt="" src="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/course"><span class="menu-action-text" id="actionmenuaction-1">Dashboard</span></a></li><li role="presentation"><span class="filler">&nbsp;</span></li><li role="presentation"><a class="icon menu-action" role="menuitem" data-title="profile,moodle" href="https://buelearning.hkbu.edu.hk/user/profile.php?id=70023" aria-labelledby="actionmenuaction-2"><img class="iconsmall" alt="" src="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/user"><span class="menu-action-text" id="actionmenuaction-2">Profile</span></a></li><li role="presentation"><a class="icon menu-action" role="menuitem" data-title="grades,grades" href="https://buelearning.hkbu.edu.hk/grade/report/overview/index.php" aria-labelledby="actionmenuaction-3"><img class="iconsmall" alt="" src="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/grades"><span class="menu-action-text" id="actionmenuaction-3">Grades</span></a></li><li role="presentation"><a class="icon menu-action" role="menuitem" data-title="messages,message" href="https://buelearning.hkbu.edu.hk/message/index.php" aria-labelledby="actionmenuaction-4"><img class="iconsmall" alt="" src="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/message"><span class="menu-action-text" id="actionmenuaction-4">Messages</span></a></li><li role="presentation"><a class="icon menu-action" role="menuitem" data-title="preferences,moodle" href="https://buelearning.hkbu.edu.hk/user/preferences.php" aria-labelledby="actionmenuaction-5"><img class="iconsmall" alt="" src="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/preferences"><span class="menu-action-text" id="actionmenuaction-5">Preferences</span></a></li><li role="presentation"><span class="filler">&nbsp;</span></li><li role="presentation"><a class="icon menu-action" role="menuitem" data-title="logout,moodle" href="https://buelearning.hkbu.edu.hk/login/logout.php?sesskey=88OlUk0XsK" aria-labelledby="actionmenuaction-6"><img class="iconsmall" alt="" src="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/logout"><span class="menu-action-text" id="actionmenuaction-6">Log out</span></a></li></ul></div></div>			            <div class="nav-collapse collapse navbar-responsive-collapse">
+                <ul class="nav"><li class="dropdown langmenu"><a href="https://buelearning.hkbu.edu.hk/mod/resource/view.php?id=710755#" class="dropdown-toggle" data-toggle="dropdown" title="Language">English ‎(en)‎<b class="caret"></b></a><ul class="dropdown-menu"><li><a title="Deutsch ‎(de)‎" href="https://buelearning.hkbu.edu.hk/mod/resource/view.php?id=710755&amp;lang=de">Deutsch ‎(de)‎</a></li><li><a title="English ‎(en)‎" href="https://buelearning.hkbu.edu.hk/mod/resource/view.php?id=710755&amp;lang=en">English ‎(en)‎</a></li><li><a title="Español - Internacional ‎(es)‎" href="https://buelearning.hkbu.edu.hk/mod/resource/view.php?id=710755&amp;lang=es">Español - Internacional ‎(es)‎</a></li><li><a title="Français ‎(fr)‎" href="https://buelearning.hkbu.edu.hk/mod/resource/view.php?id=710755&amp;lang=fr">Français ‎(fr)‎</a></li><li><a title="正體中文 ‎(zh_tw)‎" href="https://buelearning.hkbu.edu.hk/mod/resource/view.php?id=710755&amp;lang=zh_tw">正體中文 ‎(zh_tw)‎</a></li><li><a title="简体中文 ‎(zh_cn)‎" href="https://buelearning.hkbu.edu.hk/mod/resource/view.php?id=710755&amp;lang=zh_cn">簡體中文 ‎(zh_cn)‎</a></li></ul></li></ul>                <ul class="nav pull-right">
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+ 
+	</header>
+
+<div class="container-fluid clearfix">    <nav class="breadcrumb-button"></nav><span class="accesshide" id="navbar-label">Page path</span><nav aria-labelledby="navbar-label"><ul class="breadcrumb"><li><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="https://buelearning.hkbu.edu.hk/"><span itemprop="title">HKBU Moodle</span></a></span> <span class="divider"> <span class="accesshide "><span class="arrow_text">/</span>&nbsp;</span><span class="arrow sep">▶︎</span> </span></li><li><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="https://buelearning.hkbu.edu.hk/course/index.php?categoryid=309"><span itemprop="title">2017 Semester 2</span></a></span> <span class="divider"> <span class="accesshide "><span class="arrow_text">/</span>&nbsp;</span><span class="arrow sep">▶︎</span> </span></li><li><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="https://buelearning.hkbu.edu.hk/course/index.php?categoryid=331"><span itemprop="title">2017;S2</span></a></span> <span class="divider"> <span class="accesshide "><span class="arrow_text">/</span>&nbsp;</span><span class="arrow sep">▶︎</span> </span></li><li><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" title="COMP2019 Computer Systems and Software Workshop II (Section 2001/2002) [2017 S2]" href="https://buelearning.hkbu.edu.hk/course/view.php?id=70509"><span itemprop="title">COMP2019 (2001/2002) [2017 S2] - Dr Choy Man Ting</span></a></span> <span class="divider"> <span class="accesshide "><span class="arrow_text">/</span>&nbsp;</span><span class="arrow sep">▶︎</span> </span></li><li><span tabindex="0">Module 1 - Basic Web System</span> <span class="divider"> <span class="accesshide "><span class="arrow_text">/</span>&nbsp;</span><span class="arrow sep">▶︎</span> </span></li><li><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" title="File" href="https://buelearning.hkbu.edu.hk/mod/resource/view.php?id=710755"><span itemprop="title">compWS lab2 ExpressJS</span></a></span></li></ul></nav>
+</div>
+<div id="page" class="container-fluid clearfix">
+
+    <div id="page-content" class="row-fluid">
+        <div id="region-bs-main-and-pre" class="span9">
+            <div class="row-fluid">
+                <section id="region-main" class="span8 pull-right">
+                    <span class="notifications" id="user-notifications"></span><div role="main"><span id="maincontent"></span><h2>compWS lab2 ExpressJS</h2><div class="resourcecontent resourcegeneral">
+  <iframe id="resourceobject" src="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/compWS_lab2_ExpressJS.html" style="width: 865px; height: 789px;">
+    Click &lt;a href="https://buelearning.hkbu.edu.hk/pluginfile.php/1008560/mod_resource/content/0/compWS_lab2_ExpressJS.html" &gt;compWS_lab2_ExpressJS.html&lt;/a&gt; link to view the file.
+  </iframe>
+</div></div>                </section>
+                <aside id="block-region-side-pre" class="span4 desktop-first-column block-region" data-blockregion="side-pre" data-droptarget="1"><a class="skip skip-block" id="fsb-1" href="https://buelearning.hkbu.edu.hk/mod/resource/view.php?id=710755#sb-1">Skip Navigation</a><div id="inst33106" class="block_navigation  block" role="navigation" data-block="navigation" data-instanceid="33106" aria-labelledby="instance-33106-header"><div class="header"><div class="title" id="yui_3_17_2_1_1516775613660_67"><div class="block_action"><img class="block-hider-hide" alt="Hide Navigation block" src="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/switch_minus" tabindex="0" title="Hide Navigation block"><img class="block-hider-show" alt="Show Navigation block" src="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/switch_plus" tabindex="0" title="Show Navigation block"></div><h2 id="instance-33106-header">Navigation</h2></div></div><div class="content"><ul class="block_tree list" role="tree" data-ajax-loader="block_navigation/nav_loader"><li class="type_unknown depth_1 contains_branch" aria-labelledby="label_1_1" tabindex="-1"><p class="tree_item branch canexpand navigation_node" role="treeitem" aria-expanded="true" aria-owns="random5a6828bc6050230_group" data-collapsible="false" tabindex="0" aria-selected="true"><a tabindex="-1" id="label_1_1" href="https://buelearning.hkbu.edu.hk/">HKBU Moodle</a></p><ul id="random5a6828bc6050230_group" role="group" tabindex="-1"><li class="type_setting depth_2 item_with_icon" aria-labelledby="label_2_2" tabindex="-1"><p class="tree_item hasicon" role="treeitem" tabindex="-1" aria-selected="false"><a tabindex="-1" id="label_2_2" href="https://buelearning.hkbu.edu.hk/my/"><img class="smallicon navicon" alt="" src="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/navigationitem" tabindex="-1"><span class="item-content-wrap" tabindex="-1">Dashboard</span></a></p></li><li class="type_course depth_2 contains_branch" aria-labelledby="label_2_3" tabindex="-1"><p class="tree_item branch" role="treeitem" aria-expanded="false" aria-owns="random5a6828bc6050232_group" tabindex="-1" aria-selected="false"><span tabindex="-1" id="label_2_3" title="HKBU Moodle">HKBU Moodle</span></p><ul id="random5a6828bc6050232_group" role="group" aria-hidden="true" tabindex="-1"><li class="type_unknown depth_3 item_with_icon" aria-labelledby="label_3_5" tabindex="-1"><p class="tree_item hasicon" role="treeitem" tabindex="-1" aria-selected="false"><a tabindex="-1" id="label_3_5" href="https://buelearning.hkbu.edu.hk/blog/index.php"><img class="smallicon navicon" alt="" src="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/navigationitem" tabindex="-1"><span class="item-content-wrap" tabindex="-1">Site blogs</span></a></p></li><li class="type_custom depth_3 item_with_icon" aria-labelledby="label_3_6" tabindex="-1"><p class="tree_item hasicon" role="treeitem" tabindex="-1" aria-selected="false"><a tabindex="-1" id="label_3_6" href="https://buelearning.hkbu.edu.hk/badges/view.php?type=1"><img class="smallicon navicon" alt="" src="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/navigationitem" tabindex="-1"><span class="item-content-wrap" tabindex="-1">Site badges</span></a></p></li><li class="type_setting depth_3 item_with_icon" aria-labelledby="label_3_7" tabindex="-1"><p class="tree_item hasicon" role="treeitem" tabindex="-1" aria-selected="false"><a tabindex="-1" id="label_3_7" href="https://buelearning.hkbu.edu.hk/tag/search.php"><img class="smallicon navicon" alt="" src="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/navigationitem" tabindex="-1"><span class="item-content-wrap" tabindex="-1">Tags</span></a></p></li><li class="type_custom depth_3 item_with_icon" aria-labelledby="label_3_8" tabindex="-1"><p class="tree_item hasicon" role="treeitem" tabindex="-1" aria-selected="false"><a tabindex="-1" id="label_3_8" href="https://buelearning.hkbu.edu.hk/calendar/view.php?view=month"><img class="smallicon navicon" alt="" src="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/navigationitem" tabindex="-1"><span class="item-content-wrap" tabindex="-1">Calendar</span></a></p></li><li class="type_activity depth_3 item_with_icon" aria-labelledby="label_3_9" tabindex="-1"><p class="tree_item hasicon" role="treeitem" tabindex="-1" aria-selected="false"><a tabindex="-1" id="label_3_9" title="Forum" href="https://buelearning.hkbu.edu.hk/mod/forum/view.php?id=6"><img class="smallicon navicon" alt="Forum" title="Forum" src="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/icon" tabindex="-1"><span class="item-content-wrap" tabindex="-1">BU Moodle Site news</span></a></p></li><li class="type_activity depth_3 item_with_icon" aria-labelledby="label_3_11" tabindex="-1"><p class="tree_item hasicon" role="treeitem" tabindex="-1" aria-selected="false"><a tabindex="-1" id="label_3_11" title="URL" href="https://buelearning.hkbu.edu.hk/mod/url/view.php?id=1789"><img class="smallicon navicon" alt="URL" title="URL" src="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/icon(1)" tabindex="-1"><span class="item-content-wrap" tabindex="-1">Moodle FAQs - Teacher</span></a></p></li><li class="type_activity depth_3 item_with_icon" aria-labelledby="label_3_12" tabindex="-1"><p class="tree_item hasicon" role="treeitem" tabindex="-1" aria-selected="false"><a tabindex="-1" id="label_3_12" title="URL" href="https://buelearning.hkbu.edu.hk/mod/url/view.php?id=1790"><img class="smallicon navicon" alt="URL" title="URL" src="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/icon(1)" tabindex="-1"><span class="item-content-wrap" tabindex="-1">Moodle FAQs - Student</span></a></p></li><li class="type_activity depth_3 item_with_icon" aria-labelledby="label_3_14" tabindex="-1"><p class="tree_item hasicon" role="treeitem" tabindex="-1" aria-selected="false"><a tabindex="-1" id="label_3_14" title="Page" href="https://buelearning.hkbu.edu.hk/mod/page/view.php?id=19562"><img class="smallicon navicon" alt="Page" title="Page" src="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/icon(2)" tabindex="-1"><span class="item-content-wrap" tabindex="-1">Tools and software</span></a></p></li><li class="type_activity depth_3 item_with_icon" aria-labelledby="label_3_18" tabindex="-1"><p class="tree_item hasicon" role="treeitem" tabindex="-1" aria-selected="false"><a tabindex="-1" id="label_3_18" title="Page" href="https://buelearning.hkbu.edu.hk/mod/page/view.php?id=212"><img class="smallicon navicon" alt="Page" title="Page" src="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/icon(2)" tabindex="-1"><span class="item-content-wrap" tabindex="-1">Library @ Moodle</span></a></p></li></ul></li><li class="type_system depth_2 contains_branch" aria-labelledby="label_2_69" tabindex="-1"><p class="tree_item branch" role="treeitem" aria-expanded="true" aria-owns="random5a6828bc6050242_group" tabindex="-1" aria-selected="false"><span tabindex="-1" id="label_2_69">Current course</span></p><ul id="random5a6828bc6050242_group" role="group" tabindex="-1"><li class="type_course depth_3 contains_branch" aria-labelledby="label_3_70" tabindex="-1"><p class="tree_item branch canexpand" role="treeitem" aria-expanded="true" aria-owns="random5a6828bc6050243_group" tabindex="-1" aria-selected="false"><a tabindex="-1" id="label_3_70" title="COMP2019 Computer Systems and Software Workshop II (Section 2001/2002) [2017 S2]" href="https://buelearning.hkbu.edu.hk/course/view.php?id=70509">COMP2019 (2001/2002) [2017 S2] - Dr Choy Man Ting</a></p><ul id="random5a6828bc6050243_group" role="group" tabindex="-1"><li class="type_unknown depth_4 contains_branch" aria-labelledby="label_4_71" tabindex="-1"><p class="tree_item branch" role="treeitem" aria-expanded="false" aria-owns="random5a6828bc6050244_group" tabindex="-1" aria-selected="false"><a tabindex="-1" id="label_4_71" href="https://buelearning.hkbu.edu.hk/user/index.php?id=70509">Participants</a></p><ul id="random5a6828bc6050244_group" role="group" aria-hidden="true" tabindex="-1"><li class="type_setting depth_5 item_with_icon" aria-labelledby="label_5_72" tabindex="-1"><p class="tree_item hasicon" role="treeitem" tabindex="-1" aria-selected="false"><a tabindex="-1" id="label_5_72" href="https://buelearning.hkbu.edu.hk/blog/index.php?courseid=70509"><img class="smallicon navicon" alt="" src="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/navigationitem" tabindex="-1"><span class="item-content-wrap" tabindex="-1">Course blogs</span></a></p></li><li class="type_user depth_5 item_with_icon" aria-labelledby="label_5_73" tabindex="-1"><p class="tree_item hasicon" role="treeitem" tabindex="-1" aria-selected="false"><a tabindex="-1" id="label_5_73" href="https://buelearning.hkbu.edu.hk/user/view.php?id=70023&amp;course=70509"><img class="smallicon navicon" alt="" src="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/navigationitem" tabindex="-1"><span class="item-content-wrap" tabindex="-1">WONG Tsz Shing</span></a></p></li></ul></li><li class="type_unknown depth_4 contains_branch" aria-labelledby="label_4_74" tabindex="-1"><p class="tree_item branch" role="treeitem" aria-expanded="false" aria-owns="random5a6828bc6050247_group" tabindex="-1" aria-selected="false"><span tabindex="-1" id="label_4_74">Badges</span></p><ul id="random5a6828bc6050247_group" role="group" aria-hidden="true" tabindex="-1"><li class="type_setting depth_5 item_with_icon" aria-labelledby="label_5_75" tabindex="-1"><p class="tree_item hasicon" role="treeitem" tabindex="-1" aria-selected="false"><a tabindex="-1" id="label_5_75" href="https://buelearning.hkbu.edu.hk/badges/view.php?type=2&amp;id=70509"><img class="smallicon navicon" alt="Course badges" title="Course badges" src="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/badge" tabindex="-1"><span class="item-content-wrap" tabindex="-1">Course badges</span></a></p></li></ul></li><li class="type_structure depth_4 contains_branch" aria-labelledby="label_4_76" tabindex="-1"><p class="tree_item branch" role="treeitem" id="expandable_branch_30_945111" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_30_945111" data-node-key="945111" data-node-type="30" tabindex="-1" aria-selected="false"><span tabindex="-1" id="label_4_76">General</span></p></li><li class="type_structure depth_4 contains_branch" aria-labelledby="label_4_77" tabindex="-1"><p class="tree_item branch" role="treeitem" aria-expanded="true" aria-owns="random5a6828bc6050249_group" tabindex="-1" aria-selected="false"><span tabindex="-1" id="label_4_77">Module 1 - Basic Web System</span></p><ul id="random5a6828bc6050249_group" role="group" tabindex="-1"><li class="type_activity depth_5 item_with_icon" aria-labelledby="label_5_78" tabindex="-1"><p class="tree_item hasicon" role="treeitem" tabindex="-1" aria-selected="false"><a tabindex="-1" id="label_5_78" title="File" href="https://buelearning.hkbu.edu.hk/mod/resource/view.php?id=704850"><img class="smallicon navicon" alt="File" title="File" src="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/pdf-24" tabindex="-1"><span class="item-content-wrap" tabindex="-1">Comp2019 Lec01 - JavaScript Bootstrap</span></a></p></li><li class="type_activity depth_5 item_with_icon" aria-labelledby="label_5_79" tabindex="-1"><p class="tree_item hasicon" role="treeitem" tabindex="-1" aria-selected="false"><a tabindex="-1" id="label_5_79" title="File" href="https://buelearning.hkbu.edu.hk/mod/resource/view.php?id=705991"><img class="smallicon navicon" alt="File" title="File" src="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/html-24" tabindex="-1"><span class="item-content-wrap" tabindex="-1">CompWS Lab1</span></a></p></li><li class="type_activity depth_5 item_with_icon" aria-labelledby="label_5_80" tabindex="-1"><p class="tree_item hasicon" role="treeitem" tabindex="-1" aria-selected="false"><a tabindex="-1" id="label_5_80" title="Assignment" href="https://buelearning.hkbu.edu.hk/mod/assign/view.php?id=707239"><img class="smallicon navicon" alt="Assignment" title="Assignment" src="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/icon(3)" tabindex="-1"><span class="item-content-wrap" tabindex="-1">Assignment 1: Bootstrap</span></a></p></li><li class="type_activity depth_5 item_with_icon" aria-labelledby="label_5_81" tabindex="-1"><p class="tree_item hasicon" role="treeitem" tabindex="-1" aria-selected="false"><a tabindex="-1" id="label_5_81" title="File" href="https://buelearning.hkbu.edu.hk/mod/resource/view.php?id=710754"><img class="smallicon navicon" alt="File" title="File" src="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/pdf-24" tabindex="-1"><span class="item-content-wrap" tabindex="-1">compWS Lec02 Mean Backend</span></a></p></li><li class="type_activity depth_5 item_with_icon current_branch" aria-labelledby="label_5_82" tabindex="-1"><p class="tree_item hasicon active_tree_node" role="treeitem" tabindex="-1" aria-selected="false"><a tabindex="-1" id="label_5_82" title="File" href="https://buelearning.hkbu.edu.hk/mod/resource/view.php?id=710755"><img class="smallicon navicon" alt="File" title="File" src="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/html-24" tabindex="-1"><span class="item-content-wrap" tabindex="-1">compWS lab2 ExpressJS</span></a></p></li></ul></li><li class="type_structure depth_4 contains_branch" aria-labelledby="label_4_83" tabindex="-1"><p class="tree_item branch" role="treeitem" id="expandable_branch_30_957857" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_30_957857" data-node-key="957857" data-node-type="30" tabindex="-1" aria-selected="false"><span tabindex="-1" id="label_4_83">Topic 2</span></p></li><li class="type_structure depth_4 contains_branch" aria-labelledby="label_4_84" tabindex="-1"><p class="tree_item branch" role="treeitem" id="expandable_branch_30_957858" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_30_957858" data-node-key="957858" data-node-type="30" tabindex="-1" aria-selected="false"><span tabindex="-1" id="label_4_84">Topic 3</span></p></li><li class="type_structure depth_4 contains_branch" aria-labelledby="label_4_85" tabindex="-1"><p class="tree_item branch" role="treeitem" id="expandable_branch_30_957859" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_30_957859" data-node-key="957859" data-node-type="30" tabindex="-1" aria-selected="false"><span tabindex="-1" id="label_4_85">Topic 4</span></p></li><li class="type_structure depth_4 contains_branch" aria-labelledby="label_4_86" tabindex="-1"><p class="tree_item branch" role="treeitem" id="expandable_branch_30_957860" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_30_957860" data-node-key="957860" data-node-type="30" tabindex="-1" aria-selected="false"><span tabindex="-1" id="label_4_86">Topic 5</span></p></li><li class="type_structure depth_4 contains_branch" aria-labelledby="label_4_87" tabindex="-1"><p class="tree_item branch" role="treeitem" id="expandable_branch_30_957861" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_30_957861" data-node-key="957861" data-node-type="30" tabindex="-1" aria-selected="false"><span tabindex="-1" id="label_4_87">Topic 6</span></p></li><li class="type_structure depth_4 contains_branch" aria-labelledby="label_4_88" tabindex="-1"><p class="tree_item branch" role="treeitem" id="expandable_branch_30_957862" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_30_957862" data-node-key="957862" data-node-type="30" tabindex="-1" aria-selected="false"><span tabindex="-1" id="label_4_88">Topic 7</span></p></li><li class="type_structure depth_4 contains_branch" aria-labelledby="label_4_89" tabindex="-1"><p class="tree_item branch" role="treeitem" id="expandable_branch_30_957863" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_30_957863" data-node-key="957863" data-node-type="30" tabindex="-1" aria-selected="false"><span tabindex="-1" id="label_4_89">Topic 8</span></p></li></ul></li></ul></li><li class="type_system depth_2 contains_branch" aria-labelledby="label_2_90" tabindex="-1"><p class="tree_item branch" role="treeitem" id="expandable_branch_0_mycourses" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_0_mycourses" data-node-key="mycourses" data-node-type="0" tabindex="-1" aria-selected="false"><span tabindex="-1" id="label_2_90">My courses</span></p></li></ul></li></ul></div></div><span class="skip-block-to" id="sb-1"></span><a class="skip skip-block" id="fsb-2" href="https://buelearning.hkbu.edu.hk/mod/resource/view.php?id=710755#sb-2">Skip Administration</a><div id="inst33107" class="block_settings  block" role="navigation" data-block="settings" data-instanceid="33107" aria-labelledby="instance-33107-header"><div class="header"><div class="title" id="yui_3_17_2_1_1516775613660_85"><div class="block_action"><img class="block-hider-hide" alt="Hide Administration block" src="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/switch_minus" tabindex="0" title="Hide Administration block"><img class="block-hider-show" alt="Show Administration block" src="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/switch_plus" tabindex="0" title="Show Administration block"></div><h2 id="instance-33107-header">Administration</h2></div></div><div class="content"><div id="settingsnav" class="box block_tree_box"><ul class="block_tree list" role="tree" data-ajax-loader="block_navigation/site_admin_loader"><li class="type_course depth_1 contains_branch" tabindex="-1" aria-labelledby="label_1_1"><p class="tree_item root_node tree_item branch" role="treeitem" aria-expanded="false" aria-owns="random5a6828bc6050255_group" tabindex="0" aria-selected="true"><span tabindex="-1">Course administration</span></p><ul id="random5a6828bc6050255_group" role="group" aria-hidden="true" tabindex="-1"><li class="type_setting depth_2 item_with_icon" tabindex="-1" aria-labelledby="label_2_1"><p class="tree_item hasicon tree_item leaf" role="treeitem" tabindex="-1" aria-selected="false"><a href="https://buelearning.hkbu.edu.hk/grade/report/index.php?id=70509" tabindex="-1"><img class="smallicon navicon" alt="" src="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/grades(1)" tabindex="-1">Grades</a></p></li>
+<li class="type_setting depth_2 item_with_icon" tabindex="-1" aria-labelledby="label_2_2"><p class="tree_item hasicon tree_item leaf" role="treeitem" tabindex="-1" aria-selected="false"><a href="https://buelearning.hkbu.edu.hk/admin/tool/lp/coursecompetencies.php?courseid=70509" tabindex="-1"><img class="smallicon navicon" alt="" src="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/competencies" tabindex="-1">Competencies</a></p></li></ul></li></ul></div></div></div><span class="skip-block-to" id="sb-2"></span></aside>            </div>
+        </div>
+        <aside id="block-region-side-post" class="span3 block-region" data-blockregion="side-post" data-droptarget="1"></aside>    </div>
+</div>
+    <footer id="page-footer">
+       	<div class="row-fluid">
+    	<!-- Widget 1 -->
+    	<div class="span4">
+    		<div id="footer-left" class="block-region">
+    			<div class="region-content">
+       			 © 2018 Hong Kong Baptist University<div class="logininfo">You are logged in as <a href="https://buelearning.hkbu.edu.hk/user/profile.php?id=70023" title="View profile">WONG Tsz Shing</a> (<a href="https://buelearning.hkbu.edu.hk/login/logout.php?sesskey=88OlUk0XsK">Log out</a>)</div><p class="helplink"></p><a href="http://www.hkbu.edu.hk/"><img src="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/Logo_HKBU"></a>        		</div>
+        	</div>
+    	</div>
+
+    	<!-- widget 2 -->
+    	<div class="span4">
+    		<div id="footer-middle" class="block-region">
+    			<div class="region-content">
+        <p>HKBU Moodle Platform is supported and maintained by <a href="http://ito.hkbu.edu.hk/" target="_blank">Office&nbsp;of&nbsp;Information&nbsp;Technology&nbsp;(ITO)</a>.</p>
+<p>For more information please email <a href="mailto:buelearn@hkbu.edu.hk" target="_blank">buelearn@hkbu.edu.hk</a>.</p>
+<p>Best viewed with Chrome version 30, Firefox version 25, IE 10 and Safari version 6 or above.</p>        		</div>
+        	</div>
+    	</div>
+
+    	<!-- Widget 3 -->
+    	<div class="span4">
+    		<div id="footer-right" class="block-region">
+    			<div class="region-content">
+				
+
+				       			
+								
+				<a href="https://www.youtube.com/user/hongkongbaptistu/" target="_blank"><span class="footer-icon youtube"><i class="fa fa-youtube-play"></i></span></a> 				
+				
+				
+															
+								
+								
+								
+								
+								
+				<a href="https://www.facebook.com/HongKongBaptistUniversity" target="_blank"><span class="footer-icon facebook"><i class="fa fa-facebook"></i></span></a> 				
+				<a href="http://www.hkbu.edu.hk/" target="_blank"><span class="footer-icon website"><i class="fa fa-globe"></i></span></a> 				
+				
+				
+				
+				
+				
+        		</div>
+        	</div>
+    	</div>
+	</div>
+
+	<div class="footerlinks">
+	<p>
+	
+	<!--<a href="http://moodle.org/plugins/view.php?plugin=theme_aardvark">Based on an original theme created by Shaun Daubney</a> | <a href="http://moodle.org">moodle.org</a> 
+    	</p>-->
+    	
+    
+	</p></div>
+    </footer>
+
+    <script type="text/javascript">
+//<![CDATA[
+var require = {
+    baseUrl : 'https://buelearning.hkbu.edu.hk/lib/requirejs.php/1514883817/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://buelearning.hkbu.edu.hk/lib/javascript.php/1514883817/lib/jquery/jquery-1.12.1.min',
+        jqueryui: 'https://buelearning.hkbu.edu.hk/lib/javascript.php/1514883817/lib/jquery/ui-1.11.4/jquery-ui.min',
+        jqueryprivate: 'https://buelearning.hkbu.edu.hk/lib/javascript.php/1514883817/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script type="text/javascript" src="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/require.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+require(['core/first'], function() {
+;
+require(["block_navigation/navblock"], function(amd) { amd.init("33106"); });;
+require(["block_settings/settingsblock"], function(amd) { amd.init("33107", null); });;
+require(["core/notification"], function(amd) { amd.init(1008560, []); });;
+require(["core/log"], function(amd) { amd.setConfig({"level":"warn"}); });
+});
+//]]>
+</script>
+<script type="text/javascript" src="./COMP2019 (2001_2002) [2017 S2] - Dr Choy Man Ting_ compWS lab2 ExpressJS_files/footer"></script>
+<script type="text/javascript">
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"Last modified","name":"Name","error":"Error","info":"Information","yes":"Yes","no":"No","viewallcourses":"View all courses","morehelp":"More help","loadinghelp":"Loading...","cancel":"Cancel","confirm":"Confirm","areyousure":"Are you sure?","closebuttontitle":"Close","unknownerror":"Unknown error","changesmadereallygoaway":"You have made changes. Are you sure you want to navigate away and lose your changes?"},"repository":{"type":"Type","size":"Size","invalidjson":"Invalid JSON string","nofilesattached":"No files attached","filepicker":"File picker","logout":"Logout","nofilesavailable":"No files available","norepositoriesavailable":"Sorry, none of your current repositories can return files in the required format.","fileexistsdialogheader":"File exists","fileexistsdialog_editor":"A file with that name has already been attached to the text you are editing.","fileexistsdialog_filemanager":"A file with that name has already been attached","renameto":"Rename to \"{$a}\"","referencesexist":"There are {$a} alias\/shortcut files that use this file as their source","select":"Select"},"admin":{"confirmdeletecomments":"You are about to delete comments, are you sure?","confirmation":"Confirmation"}};
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+(function() {M.util.load_flowplayer();
+setTimeout("fix_column_widths()", 20);
+ M.util.js_pending('random5a6828bc605021'); Y.on('domready', function() { M.util.init_maximised_embed(Y, "resourceobject");  M.util.js_complete('random5a6828bc605021'); });
+function legacy_activity_onclick_handler_1(e) { e.halt(); window.open('https://buelearning.hkbu.edu.hk/mod/url/view.php?id=1789&redirect=1', '', 'width=620,height=450,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes'); return false; };
+function legacy_activity_onclick_handler_2(e) { e.halt(); window.open('https://buelearning.hkbu.edu.hk/mod/url/view.php?id=1790&redirect=1', '', 'width=620,height=450,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes'); return false; };
+function legacy_activity_onclick_handler_3(e) { e.halt(); window.open('https://buelearning.hkbu.edu.hk/mod/resource/view.php?id=515317&redirect=1', '', 'width=800,height=600,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes'); return false; };
+function legacy_activity_onclick_handler_4(e) { e.halt(); window.open('https://buelearning.hkbu.edu.hk/mod/resource/view.php?id=515236&redirect=1', '', 'width=800,height=600,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes'); return false; };
+function legacy_activity_onclick_handler_5(e) { e.halt(); window.open('https://buelearning.hkbu.edu.hk/mod/resource/view.php?id=515239&redirect=1', '', 'width=800,height=600,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes'); return false; };
+function legacy_activity_onclick_handler_6(e) { e.halt(); window.open('https://buelearning.hkbu.edu.hk/mod/resource/view.php?id=479849&redirect=1', '', 'width=620,height=450,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes'); return false; };
+function legacy_activity_onclick_handler_7(e) { e.halt(); window.open('https://buelearning.hkbu.edu.hk/mod/resource/view.php?id=479847&redirect=1', '', 'width=620,height=450,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes'); return false; };
+function legacy_activity_onclick_handler_8(e) { e.halt(); window.open('https://buelearning.hkbu.edu.hk/mod/resource/view.php?id=555193&redirect=1', '', 'width=800,height=600,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes'); return false; };
+function legacy_activity_onclick_handler_9(e) { e.halt(); window.open('https://buelearning.hkbu.edu.hk/mod/resource/view.php?id=518008&redirect=1', '', 'width=800,height=600,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes'); return false; };
+function legacy_activity_onclick_handler_10(e) { e.halt(); window.open('https://buelearning.hkbu.edu.hk/mod/resource/view.php?id=480668&redirect=1', '', 'width=800,height=600,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes'); return false; };
+function legacy_activity_onclick_handler_11(e) { e.halt(); window.open('https://buelearning.hkbu.edu.hk/mod/resource/view.php?id=554834&redirect=1', '', 'width=800,height=600,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes'); return false; };
+function legacy_activity_onclick_handler_12(e) { e.halt(); window.open('https://buelearning.hkbu.edu.hk/mod/resource/view.php?id=554833&redirect=1', '', 'width=800,height=600,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes'); return false; };
+function legacy_activity_onclick_handler_13(e) { e.halt(); window.open('https://buelearning.hkbu.edu.hk/mod/resource/view.php?id=492118&redirect=1', '', 'width=800,height=600,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes'); return false; };
+function legacy_activity_onclick_handler_14(e) { e.halt(); window.open('https://buelearning.hkbu.edu.hk/mod/resource/view.php?id=278256&redirect=1', '', 'width=620,height=450,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes'); return false; };
+function legacy_activity_onclick_handler_15(e) { e.halt(); window.open('https://buelearning.hkbu.edu.hk/mod/resource/view.php?id=238134&redirect=1', '', 'width=620,height=450,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes'); return false; };
+function legacy_activity_onclick_handler_16(e) { e.halt(); window.open('https://buelearning.hkbu.edu.hk/mod/resource/view.php?id=237070&redirect=1', '', 'width=620,height=450,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes'); return false; };
+function legacy_activity_onclick_handler_17(e) { e.halt(); window.open('https://buelearning.hkbu.edu.hk/mod/resource/view.php?id=236659&redirect=1', '', 'width=620,height=450,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes'); return false; };
+function legacy_activity_onclick_handler_18(e) { e.halt(); window.open('https://buelearning.hkbu.edu.hk/mod/resource/view.php?id=217516&redirect=1', '', 'width=620,height=450,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes'); return false; };
+function legacy_activity_onclick_handler_19(e) { e.halt(); window.open('https://buelearning.hkbu.edu.hk/mod/resource/view.php?id=217515&redirect=1', '', 'width=620,height=450,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes'); return false; };
+function legacy_activity_onclick_handler_20(e) { e.halt(); window.open('https://buelearning.hkbu.edu.hk/mod/resource/view.php?id=209296&redirect=1', '', 'width=620,height=450,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes'); return false; };
+function legacy_activity_onclick_handler_21(e) { e.halt(); window.open('https://buelearning.hkbu.edu.hk/mod/resource/view.php?id=191686&redirect=1', '', 'width=620,height=450,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes'); return false; };
+function legacy_activity_onclick_handler_22(e) { e.halt(); window.open('https://buelearning.hkbu.edu.hk/mod/resource/view.php?id=164687&redirect=1', '', 'width=620,height=450,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes'); return false; };
+function legacy_activity_onclick_handler_23(e) { e.halt(); window.open('https://buelearning.hkbu.edu.hk/mod/resource/view.php?id=278047&redirect=1', '', 'width=620,height=450,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes'); return false; };
+function legacy_activity_onclick_handler_24(e) { e.halt(); window.open('https://buelearning.hkbu.edu.hk/mod/resource/view.php?id=163875&redirect=1', '', 'width=620,height=450,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes'); return false; };
+function legacy_activity_onclick_handler_25(e) { e.halt(); window.open('https://buelearning.hkbu.edu.hk/mod/url/view.php?id=152444&redirect=1', '', 'width=1000,height=600,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes'); return false; };
+function legacy_activity_onclick_handler_26(e) { e.halt(); window.open('https://buelearning.hkbu.edu.hk/mod/resource/view.php?id=124306&redirect=1', '', 'width=620,height=450,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes'); return false; };
+function legacy_activity_onclick_handler_27(e) { e.halt(); window.open('https://buelearning.hkbu.edu.hk/mod/page/view.php?id=107976&inpopup=1', '', 'width=480,height=450,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes'); return false; };
+function legacy_activity_onclick_handler_28(e) { e.halt(); window.open('https://buelearning.hkbu.edu.hk/mod/page/view.php?id=114994&inpopup=1', '', 'width=620,height=450,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes'); return false; };
+M.util.help_popups.setup(Y);
+Y.use("moodle-core-popuphelp",function() {M.core.init_popuphelp();
+});
+M.util.init_skiplink(Y);
+Y.use("moodle-core-formautosubmit",function() {M.core.init_formautosubmit({"selectid":"single_select5a6828bc6050261","nothing":false});
+});
+Y.use("moodle-core-actionmenu",function() {M.core.actionmenu.init();
+});
+Y.use("moodle-core-formautosubmit",function() {M.core.init_formautosubmit({"selectid":"single_select5a6828bc6050263","nothing":false});
+});
+M.util.init_block_hider(Y, {"id":"inst33106","title":"Navigation","preference":"block33106hidden","tooltipVisible":"Hide Navigation block","tooltipHidden":"Show Navigation block"});
+M.util.init_block_hider(Y, {"id":"inst33107","title":"Administration","preference":"block33107hidden","tooltipVisible":"Hide Administration block","tooltipHidden":"Show Administration block"});
+ M.util.js_pending('random5a6828bc6050266'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random5a6828bc6050266'); });
+Y.on('click', legacy_activity_onclick_handler_1, "#label_3_11", null);
+Y.on('click', legacy_activity_onclick_handler_2, "#label_3_12", null);
+})();
+//]]>
+</script>
+
+
+
+
+</body><div></div></html>

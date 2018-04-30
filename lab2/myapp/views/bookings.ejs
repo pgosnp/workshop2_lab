@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <table class="table">
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Website</th>
+      <th>NumTickets</th>
+      <th></th>
+      <th></th>
+    </tr>
+
+    <% bookingInfo.forEach( function(info)  { %>
+      <tr>
+        <td>
+          <%= info.name %>
+        </td>
+        <td>
+          <%= info.email %>
+        </td>
+        <td>
+          <%= info.website %>
+        </td>
+        <td>
+          <%= info.numTickets %>
+        </td>
+        <td>
+          <a href="/update/<%= info._id %>">Update</a>
+        </td>
+        <td>
+          <a href="/delete/<%= info._id %>">Delete</a>
+        </td>
+      </tr>
+      <% }) %>
+  </table>
+</body>
+
+</html>

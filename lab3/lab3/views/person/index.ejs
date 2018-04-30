@@ -1,0 +1,39 @@
+<!--index.ejs-->
+<table class="table">
+  <% persons.forEach( function(model) { %>
+    <tr>
+      <td>
+        <%=model.name%>
+      </td>
+      <td>
+        <%=model.age%>
+      </td>
+      <td>
+        <button type="button" onclick="deletePerson('<%= model.id %>')" class="btn btn-primary">Delete</button>
+      </td>
+    </tr>
+    <% }); %>
+</table>
+
+<script>
+  function deletePerson(id) {
+
+    var r = confirm("Confirm Delete?");
+    if (r == true) {
+
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", "/person/delete/" + id, true);
+      xhr.onload = function (e) {
+        var jsonResponse = JSON.parse(this.responseText);
+        alert(jsonResponse.message);
+        location.reload(true);
+      };
+      xhr.send();
+
+    } else {
+      alert("cancelled");
+    }
+
+  }
+
+</script>

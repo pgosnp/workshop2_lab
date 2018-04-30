@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Page</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+
+  <form action="/update/<%=booking._id%>" method="post">
+    <fieldset>
+        <legend>Booking Details</legend>
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="<%=booking.name%>">
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" value="<%=booking.email%>">
+        </div> 
+        <div>
+            <label>Website:</label>
+            <input type="text" id="website" name="website" value="<%=booking.website%>">
+        </div>
+        <div>
+            <label for="numTickets">No. of Tickets:</label>
+            <input type="text" id="numTickets" name="numTickets" value="<%=booking.numTickets%>">
+        </div>
+        <div class="submit">
+            <input type="submit" value="Submit">
+        </div>
+    </fieldset>
+  </form>
+  
+</body>
+</html>

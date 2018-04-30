@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CS Workshops Lab #1</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
+        crossorigin="anonymous">
+    <style>
+        .class3 {
+            background-color: lightsalmon
+        }
+    </style>
+</head>
+
+<body onload="pageLoaded()">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="#">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                    <a class="nav-item nav-link" href="#">Features</a>
+                    <a class="nav-item nav-link" href="#">Pricing</a>
+                    <a class="nav-item nav-link disabled" href="#">Disabled</a>
+                </div>
+            </div>
+        </nav>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Fluid jumbotron</h1>
+                <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="card col-12 col-sm-6 col-lg-4 col-xl-3" id="div01">
+                <button class="btn btn-primary" type="button" onclick="btnClicked(this)">I'm Button 1, Click me!</button>
+            </div>
+            <div class="card col-12 col-sm-6 col-lg-4 col-xl-3" id="div02">
+                <button class="btn btn-info" type="button" onclick="btn2Clicked(this)">I'm Button 2, Click me!</button>
+            </div>
+            <div class="card col-12 col-sm-6 col-lg-4 col-xl-3" id="div03">
+                <button class="btn btn-dark" type="button" onclick="btn3Clicked(this)">I'm Button 3, Click me!</button>
+            </div>
+            <div class="card col-12 col-sm-6 col-lg-4 col-xl-3" id="div04">
+                <img class="img-fluid img-thumbnail" src="http://via.placeholder.com/350x150/666.png" />
+            </div>
+            <div class="card col-12 col-sm-6 col-lg-4 col-xl-3" id="div05"></div>
+            <div class="card col-12 col-sm-6 col-lg-4 col-xl-3" id="div06"></div>
+            <div class="card col-12 col-sm-6 col-lg-4 col-xl-3" id="div07"></div>
+            <div class="card col-12 col-sm-6 col-lg-4 col-xl-3" id="div08"></div>
+            <div class="card col-12 col-sm-6 col-lg-4 col-xl-3" id="div09"></div>
+            <div class="card col-12 col-sm-6 col-lg-4 col-xl-3" id="div10"></div>
+            <div class="card col-12 col-sm-6 col-lg-4 col-xl-3" id="div11"></div>
+            <div class="card col-12 col-sm-6 col-lg-4 col-xl-3" id="div12"></div>
+        </div>
+    </div>
+    <script>
+        function btnClicked(elem) {
+            console.log("console output");
+            elem.innerHTML = "Don't click me!";
+        };
+
+        function btn2Clicked(elem) {
+            elem.style = "display:none";
+            // elem.parentNode.innerHTML="It's gone";
+        };
+
+        function btn3Clicked(elem) {
+            elem.parentNode.className += " class3";
+        };
+
+        function pageLoaded() {
+            runDiv5();
+            runDiv6();
+            runDiv7();
+            runDiv8();
+            runDiv9();
+            runDiv10();
+            runDiv11();
+            runDiv12();
+        }
+
+        function runDiv5() {
+            var booleanVariable = true;
+            var numericVariable = 12;
+            var stringVariable = "Twelve";
+
+            document.getElementById("div05").innerHTML = booleanVariable + " " + numericVariable + " " + stringVariable +
+                "<br>";
+            document.getElementById("div05").innerHTML += typeof booleanVariable + " " + typeof numericVariable + " " +
+                typeof stringVariable;
+        }
+
+        function runDiv6() {
+            var sukiyaki = {
+                beef: "2 lb",
+                eggs: 4,
+                crucial: "pot"
+            };
+
+            var string = "<table class='table table-striped table-hover table-bordered'>";
+
+            for (item in sukiyaki) {
+                string += "<tr><td>" + item + "</td><td>" + sukiyaki[item] + "</td></tr>";
+            }
+
+            string += "</table>"
+
+            // items are the keys (or names, indices), while sukiyaki[item] are the values.
+
+            document.getElementById("div06").innerHTML = string;
+        }
+
+        function runDiv7() {
+            var sukiyakiParticipants = ["Martin", "Kenny", "Jarvis"];
+
+            var string = typeof (sukiyakiParticipants) + "<br><ul>";
+
+            for (person of sukiyakiParticipants) {
+                string += "<li class='list-group-item'>" + person + "</li>";
+            }
+
+            string += "</ul>"
+
+            document.getElementById("div07").innerHTML = string;
+        }
+
+        function runDiv8() {
+
+            var declaredAndAssigned = "Some value";
+
+            var declaredButNotAssigned;
+
+            document.getElementById("div08").innerHTML = typeof declaredAndAssigned + " " + typeof declaredButNotAssigned +
+                " " + typeof notYetDeclared;
+
+            // the last two will give "undefined" as its type.
+
+            // if (typeof doesntExist !== "undefined") {
+
+            //     if (doesntExist == 1) console.log("Reference Error");
+
+            // }
+
+        }
+
+        function runDiv9() {
+
+            var b; // b is now undefined. If this line is commented, b is undeclared and the line below will throws error.
+
+            var a = b || 'b is falsy';
+
+            document.getElementById("div09").innerHTML = a + "<br>Null Coalescing Operator.";
+
+        }
+
+        function runDiv10() {
+
+            var m = 3;
+            var n = 2;
+            var x = 10;
+            var y = 11
+
+            var a = m == n ? x : y;
+
+            document.getElementById("div10").innerHTML = a + "<br>Inline If.";
+
+        }
+
+        function runDiv11() {
+
+            var d = new Date("1/15/2018");
+            var d = new Date("Jan 15 2018");
+            var d = new Date("15 Jan 2018");
+
+            document.getElementById("div11").innerHTML = "Date is " + d;
+        }
+
+        function runDiv12() {
+
+            var str = "How are you doing today?";
+            var res = str.split(" ");
+            document.getElementById("div12").innerHTML = res[3]; // doing
+
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

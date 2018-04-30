@@ -1,0 +1,34 @@
+<ion-view title="{{item.name}}" id="page5">
+  <ion-content padding="true" class="has-header">
+    <div style="margin: 0px; background-color: rgb(232, 235, 239); text-align: center;">
+      <!-- <i class="icon ion-image" style="font-size: 64px; color: rgb(136, 136, 136); vertical-align: middle;"></i> -->
+      <img ng-src="{{item.image}}" style="width:100%" />
+    </div>
+    <div id="itemDetails-markdown5" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">
+        {{item.desc}}
+      </p>
+    </div>
+    <div id="itemDetails-markdown6" style="text-align:right;" class="show-list-numbers-and-dots">
+      <p style="color:#726D2A;">
+        <strong>Unit Price: ${{item.price}}</strong>
+      </p>
+    </div>
+    <form id="itemDetails-form1" class="list">
+      <label class="item item-input" id="itemDetails-input1">
+        <span class="input-label">Quantity</span>
+        <input type="number" placeholder="0" min=0 ng-model="data.quantity">
+      </label>
+    </form>
+    <div id="itemDetails-markdown8" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">
+        <strong>Subtotal: $ {{item.price * data.quantity}}</strong>
+      </p>
+    </div>
+    <button ng-if="data.showAdd==1" ng-click="addCartItem()" id="itemDetails-button8" class="button button-positive button-block icon-right ion-android-cart">Add to Cart</button>
+    <div id="itemDetails-button-bar2" class="button-bar">
+      <button ng-if="data.showAdd==0" ng-click="updateCartItem()" id="itemDetails-button12" class="button button-royal button-block">Update</button>
+      <button ng-if="data.showAdd==0" ng-click="removeCartItem()" id="itemDetails-button13" class="button button-assertive button-block">Delete</button>
+    </div>
+  </ion-content>
+</ion-view>

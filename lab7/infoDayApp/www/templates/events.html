@@ -1,0 +1,14 @@
+<ion-view title="Events" id="page3">
+  <ion-content padding="true" class="has-header">
+    <ion-list id="events-list1">
+      <!-- <ion-item ng-repeat="event in events" id="events-list-item10" ui-sref="tabController.eventDetails({ id: '{{event.id}}' })">
+        <img src="{{event.avatar}}"></img>
+        <h2>{{event.title}}</h2>
+      </ion-item> -->
+      <ion-item id="d22" class="item-avatar" ui-sref="tabController.eventDetails({ id: '{{event.id}}' })" ng-repeat="event in events">
+        <img src="{{event.avatar}}"></img>
+        <h2>{{event.title}}</h2>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
